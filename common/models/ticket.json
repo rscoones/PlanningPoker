@@ -1,0 +1,36 @@
+{
+  "name": "Ticket",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "poker": {
+      "type": "belongsTo",
+      "model": "Poker",
+      "foreignKey": ""
+    },
+    "scores": {
+      "type": "hasMany",
+      "model": "Score",
+      "foreignKey": "ticketId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
