@@ -13,10 +13,11 @@
       "model": "Poker",
       "foreignKey": "ownerId"
     },
-    "participants": {
+    "scores": {
       "type": "hasMany",
-      "model": "Participant",
-      "foreignKey": ""
+      "model": "Score",
+      "foreignKey": "",
+      "through": "Ticket"
     }
   },
   "acls": [
